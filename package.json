@@ -1,0 +1,31 @@
+{
+  "name": "front_final_project",
+  "version": "1.0.0",
+  "description": "A customize version of Wordle - a web based word game.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "saas ./src/wordle.scss ./src/wordle.css",
+    "dev-server": "http-server src",
+    "dev-saas": "saas src/wordle.scss src/wordle.css --watch",
+    "dev": "npm run dev-server & npm run dev-saas"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ShirWein/front_final_project.git"
+  },
+  "keywords": [
+    "Front_end",
+    "Wordle"
+  ],
+  "author": "Shir W",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ShirWein/front_final_project/issues"
+  },
+  "homepage": "https://github.com/ShirWein/front_final_project#readme",
+  "devDependencies": {
+    "http-server": "^14.1.1",
+    "saas": "^1.0.0"
+  }
+}
