@@ -1,4 +1,35 @@
-p {
-    color: red;
-    background-color: aqua;
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.header{
+    display: flex;
+    justify-content: center;
+    gap: 182px;
+    margin-top: 22px;
+    margin-bottom: 42px;
+
+}
+
+.board {
+    display:grid;
+    grid-template-rows: repeat(6, 60px);
+    grid-template-columns: repeat(5, 1fr);
+    padding-left: 212px;
+    padding-right: 212px;
+    padding-inline-end: 212px;
+
+    input {
+        height: 50px;
+        width: 50px; 
+        margin: 2px;
+    }
+}
+
+.keyboard {
+    display: grid;
+    grid-template-rows: repeat(3, 30px);
+
 }

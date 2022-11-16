@@ -8,7 +8,7 @@
     "build": "sass src/wordle.scss src/wordle.css",
     "dev-server": "http-server src",
     "dev-sass": "sass src/wordle.scss src/wordle.css --watch",
-    "dev": "npm run dev-server & npm run dev-sass"
+    "dev": "npm-run-all --parallel dev-server dev-sass"
   },
   "repository": {
     "type": "git",
@@ -26,6 +26,7 @@
   "homepage": "https://github.com/ShirWein/front_final_project#readme",
   "devDependencies": {
     "http-server": "^14.1.1",
+    "npm-run-all": "^4.1.5",
     "sass": "^1.56.1"
   }
 }
