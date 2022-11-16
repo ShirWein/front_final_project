@@ -1,1 +1,5 @@
-# front end final project - Wodle Game 
+# _front end final project - Wodle Game_
+using HTML, CSCC & JavaScript
+
+
+
