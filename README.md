@@ -1,1 +1,5 @@
-# front_final_project
+# _front end final project - Wordle Game_
+using HTML, CSCC & JavaScript
+
+
+
