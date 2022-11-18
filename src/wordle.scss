@@ -68,14 +68,16 @@ body {
     width: 100%;
     grid-template-columns: repeat(5, 1fr);
     height: 30rem;
-    gap: 0.5rem;
+    gap: 0.8rem;
     margin: auto;
     max-width: 26rem;
     margin-top: 1rem;
 
-    .row {
+    input {
         display: grid;
         border: 1px solid gainsboro;
+        border-radius: 12px;
+        min-width:0;
     }
 }
 
