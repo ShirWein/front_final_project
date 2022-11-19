@@ -49,8 +49,9 @@ let i;
 for (i = 0; i < allElements.length; i++) {
   let el = allElements[i];
   el.setAttribute('maxLength',1);
+  el.setAttribute('pattern', "[\u0590-\u05FF]");
   el.addEventListener("keyup", function () {
-    if (el.maxLength === 1) {this.nextSibling.nextSibling.focus();}
+    if (el.maxLength === 1 && el.pattern === "[\u0590-\u05FF]") {this.nextSibling.nextSibling.focus();}
   });
 }
 
