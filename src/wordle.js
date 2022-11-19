@@ -19,20 +19,48 @@ document.addEventListener('DOMContentLoaded', myFocus);
 //     inp.test(pattern);
 // }
 
-function inputValid  () {
-    let pattern = RegExp("^[\u0590-\u05FF]+$");
-    let inp = document.querySelectorAll('input');
-    for (let i = 0; i <= (inp.length);  i++) {
-        inp[i].setAttribute('maxLength',1);
-        inp[i].setAttribute('index',i);
-        let next = inp.index;
-        if (inp[i].maxLength === 1) {
-            if (next < document.querySelector('.board').length) {
-                document.querySelector('.board').elements[next].focus();
-            }
-        }
-    }
+// function inputValid  () {
+//     let pattern = RegExp("^[\u0590-\u05FF]+$");
+//     let inp = document.querySelectorAll('input');
+//     for (let i = 0; i <= (inp.length);  i++) {
+//         inp[i].setAttribute('maxLength',1);
+//         inp[i].setAttribute('index',i);}
+//     Array.from(inp).forEach(function(inpi) {
+//         inpi.addEventListener('keyup', function(event) {
+//             if (inpi.maxLength === 1) {
+//                 inpi.nextElementSibling.focus()
+//             }
+//         });
+//     })        
+// }
+
+
+// function inputValid  () {
+//     let pattern = RegExp("^[\u0590-\u05FF]+$");
+//     let inp = document.querySelectorAll('input');
+//     for (let i = 0; i <= (inp.length);  i++) {
+//         inp[i].setAttribute('maxLength',1);
+//         inp[i].setAttribute('index',i);
+//             }
+//  };
+
+const allElements = document.querySelectorAll('input');
+let i;
+for (i = 0; i < allElements.length; i++) {
+  let el = allElements[i];
+  el.setAttribute('maxLength',1);
+  el.addEventListener("keyup", function () {
+    if (el.maxLength === 1) {this.nextSibling.nextSibling.focus();}
+  });
 }
+
+
+
+
+
+
+
+
 
 
 
@@ -52,4 +80,4 @@ function inputValid  () {
 //     return (/[\u0590-\u05FF]/).test(inp);
 // }  
 
-document.addEventListener('keyup', inputValid);
+// document.addEventListener('keyup', inputValid);
